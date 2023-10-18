@@ -1,7 +1,7 @@
 <template>
   <div class="container">
 <!--    <h1 id="hint">Step 1: <br/> Please Upload Specification And Atomic VHDL Code Of Your System.</h1>-->
-    <h1 id="hint">Step *2: <br/> Please Upload the Specification Of Your System.</h1>
+    <h1 id="hint">Step 2: <br/> Please Upload the Specification Of Your System.</h1>
 <!--    <p>The Main Controller Specification Demo is as follows</p>-->
 <!--    <vhdl-editor></vhdl-editor>-->
     <upload-file></upload-file>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
 
-    <h1 class="hint">Step *4.1: <br>Generate atomic systems</h1>
+    <h1 class="hint">Step 4: <br>Generate atomic systems</h1>
     <h2>Click button to generate the atomic system code</h2>
 
     <generate-atom></generate-atom>

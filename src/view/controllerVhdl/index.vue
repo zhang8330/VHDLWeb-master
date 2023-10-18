@@ -2,7 +2,7 @@
 
   <controller-vhdl/>
   <div class="button-container">
-    <back-btn class="left-button" to="/physical/JudgeAndCompleteAndGenerate">Back</back-btn>
+    <back-btn class="left-button" to="/generate/atom">Back</back-btn>
     <next-step-btn class="right-button" to="/assembleSystem">Next Step</next-step-btn>
   </div>
 </template>

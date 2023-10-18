@@ -1,109 +1,29 @@
 <template>
   <div class="container">
-
     <ul class="process-items">
       <li class="process-item">
         <a class="process-link" title="Step1"><h3>Step</h3></a>
         <ul>
           <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;1.1 Upload the device model</a>
+            <a class="process-link" title="Upload of the device model library">&nbsp;1. Upload of the device model library</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;1.2 Show all the devices</a>
+            <a class="process-link" title="Upload of the requirements specification document">&nbsp;2. Upload of the requirements specification document</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;1.3 Delete a device</a>
+            <a class="process-link" title="Completion of computing component information">&nbsp;3. Completion of computing component information</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*2. Upload the requirements specification document</a>
+            <a class="process-link" title="Generation of atomic systems">&nbsp;4. Generation of atomic systems</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*3. Completion of computing component information</a>
-          </li>
-<!--          <li class="is-process-item">-->
-<!--            <a class="process-link" title="Upload Main Controller">&nbsp;1.4 Define atomic system test cases</a>-->
-<!--          </li>-->
-        </ul>
-      </li>
-      <li class="process-item">
-        <ul>
-          <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*4.1 Generate atomic systems</a>
+            <a class="process-link" title="Generation of combination controllers">&nbsp;5. Generation of combination controllers</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*4.2 Download the Atomic system VHDL code</a>
-          </li>
-        </ul>
-      </li>
-<!--      <li class="process-item">-->
-<!--        <a class="process-link" title="Step1"><h3>Part 3</h3></a>-->
-<!--        <ul>-->
-<!--          <li class="is-process-item">-->
-<!--            <a class="process-link" title="Upload Main Controller">&nbsp;3.1 Determine whether the BDomain needs to be completed</a>-->
-<!--          </li>-->
-<!--          <li class="is-process-item">-->
-<!--            <a class="process-link" title="Upload Main Controller">&nbsp;3.2 Complete the BDomain</a>-->
-<!--          </li>-->
-<!--          <li class="is-process-item">-->
-<!--            <a class="process-link" title="Upload Main Controller">&nbsp;3.3 Generates BDIP nuclei</a>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </li>-->
-      <li class="process-item">
-
-        <ul>
-          <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*5.1 Determine whether the physical data storage needs to be completed</a>
+            <a class="process-link" title="Generation of simulation results">&nbsp;6. Generation of simulation results</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*5.2 Complete the physical data storage</a>
-          </li>
-          <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*5.3 Generate the physical data storage IP core</a>
-          </li>
-        </ul>
-      </li>
-      <li class="process-item">
-
-        <ul>
-          <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*6.1 Generate controller vhdl code</a>
-          </li>
-          <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*6.2 Complete the controller vhdl code</a>
-          </li>
-          <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*6.3 Generate controller IP core</a>
-          </li>
-        </ul>
-      </li>
-      <li class="process-item">
-
-        <ul>
-          <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*7. Integrate system</a>
-          </li>
-        </ul>
-      </li>
-      <li class="process-item">
-
-        <ul>
-          <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*8.1 Get the simulation structure</a>
-          </li>
-          <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*8.2 Show the model</a>
-          </li>
-          <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*8.3 Show the data</a>
-          </li>
-        </ul>
-      </li>
-      <li class="process-item">
-<!--        <a class="process-link" title="Step1"><h3>Part 7</h3></a>-->
-        <ul>
-          <li class="is-process-item">
-            <a class="process-link" title="Upload Main Controller">&nbsp;*9. Property verification</a>
+            <a class="process-link" title="Generation of data visualizations">&nbsp;7. Generation of data visualizations</a>
           </li>
         </ul>
       </li>

@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <h1 class="hint">Step *9: <br>Property verification.</h1>
+    <h1 class="hint"><br>Property verification.</h1>
   </div>
   <property-verification/>
-  <div class="button-container">
-    <back-btn class="left-button" to="/getSimulationStructure">Back</back-btn>
-    <next-step-btn class="right-button" to="/propertyVerification">Next Step</next-step-btn>
-  </div>
+<!--  <div class="button-container">-->
+<!--    <back-btn class="left-button" to="/getSimulationStructure">Back</back-btn>-->
+<!--    <next-step-btn class="right-button" to="/propertyVerification">Next Step</next-step-btn>-->
+<!--  </div>-->
 </template>
 
 <script>

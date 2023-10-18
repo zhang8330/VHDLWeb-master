@@ -30,7 +30,7 @@
 
     <div class="button-container">
       <back-btn class="left-button" to="/generate/main">Back</back-btn>
-      <next-step-btn class="right-button" to="/download">Next Step</next-step-btn>
+      <next-step-btn class="right-button" to="/controllerVhdl">Next Step</next-step-btn>
     </div>
 
 </template>

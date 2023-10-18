@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="hint">Step *8: <br></h1>
+    <h1 class="hint"><br></h1>
   </div>
   <div id="componentBox">
     <div class="flex-container">
@@ -13,10 +13,10 @@
     </div>
   </div>
 
-  <div class="button-container" style="display: flex;">
-    <back-btn class="left-button" to="/assembleSystem">Back</back-btn>
-    <next-step-btn class="right-button" to="/propertyVerification">Next Step</next-step-btn>
-  </div>
+<!--  <div class="button-container" style="display: flex;">-->
+<!--    <back-btn class="left-button" to="/assembleSystem">Back</back-btn>-->
+<!--    <next-step-btn class="right-button" to="/propertyVerification">Next Step</next-step-btn>-->
+<!--  </div>-->
 </template>
 
 <script>

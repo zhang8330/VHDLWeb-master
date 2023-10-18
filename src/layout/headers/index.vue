@@ -38,14 +38,14 @@
             <el-menu-item index="/upload/sub" class="sub-menu-item">Show all the devices</el-menu-item>
             <el-menu-item index="/upload/sub" class="sub-menu-item">Delete devices</el-menu-item>
           </el-sub-menu>
-          <el-sub-menu index="1">
-            <template #title>
-              Physical data
-            </template>
-            <el-menu-item index="/physical/JudgeAndCompleteAndGenerate" class="sub-menu-item">Determine whether the physical data storage needs to be completed</el-menu-item>
-            <el-menu-item index="/physical/JudgeAndCompleteAndGenerate" class="sub-menu-item">Complete the physical data storage</el-menu-item>
-            <el-menu-item index="/physical/JudgeAndCompleteAndGenerate" class="sub-menu-item">Generate the physical data storage IP core</el-menu-item>
-          </el-sub-menu>
+<!--          <el-sub-menu index="1">-->
+<!--            <template #title>-->
+<!--              Physical data-->
+<!--            </template>-->
+<!--            <el-menu-item index="/physical/JudgeAndCompleteAndGenerate" class="sub-menu-item">Determine whether the physical data storage needs to be completed</el-menu-item>-->
+<!--            <el-menu-item index="/physical/JudgeAndCompleteAndGenerate" class="sub-menu-item">Complete the physical data storage</el-menu-item>-->
+<!--            <el-menu-item index="/physical/JudgeAndCompleteAndGenerate" class="sub-menu-item">Generate the physical data storage IP core</el-menu-item>-->
+<!--          </el-sub-menu>-->
           <el-sub-menu index="2">
             <template #title>Controller</template>
             <el-menu-item index="/controllerVhdl" class="sub-menu-item">Generate controller vhdl code</el-menu-item>
@@ -62,7 +62,13 @@
 <!--            <el-menu-item index="/upload/sub" class="sub-menu-item">Show the data</el-menu-item>-->
 <!--          </el-sub-menu>-->
           <!--    <el-menu-item index="/assemble" style="border: 0px">Assemble Total System</el-menu-item>-->
-              <el-menu-item index="4" @click="this.$router.push('/download')" style="background-color: transparent !important;">Download</el-menu-item>
+          <el-menu-item index="4" @click="this.$router.push('/download')" style="background-color: transparent !important;">Download</el-menu-item>
+          <el-menu-item index="5" @click="this.$router.push('/assembleSystem')" style="background-color: transparent !important;">Assemble System</el-menu-item>
+          <el-sub-menu index="6">
+            <template #title>Verify</template>
+            <el-menu-item index="/propertyVerification" class="sub-menu-item">Property verification of interface conformance</el-menu-item>
+          </el-sub-menu>
+
           <!--    <el-menu-item index="/help" >Help</el-menu-item>-->
           <!--    <el-menu-item index="6" style="border: 0px">Login</el-menu-item>-->
         </el-menu>

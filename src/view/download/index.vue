@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="hint">Step *4.2: <br>Please Download the Atomic System VHDL Code.</h1>
+    <h1 class="hint"><br>Please Download the Atomic System VHDL Code.</h1>
   <downloadFile class = "downloadfile"/>
   </div>
   <div class="button-container">
