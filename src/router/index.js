@@ -87,6 +87,11 @@ const routes = [
                 path: '/propertyVerification',
                 name: '/propertyVerification',
                 component: () => import('../view/propertyVerification')
+            },
+            {
+                path: '/simulationResult',
+                name: '/simulationResult',
+                component: () => import('../view/simulationResult')
             }
         ]
     },

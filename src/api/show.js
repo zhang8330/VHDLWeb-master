@@ -22,3 +22,16 @@ export function showData(data){
         data
     })
 }
+export function showExternalModule(){
+    return request({
+        url:"/showexternalmodule",
+        method:"post"
+    })
+}
+export function showExternalData(data){
+    return request({
+        url:"/showexternaldata",
+        method:"post",
+        data
+    })
+}

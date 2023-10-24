@@ -7,3 +7,15 @@ export function getModule(data){
         data
     })
 }
+export function runSimulation(){
+    return request({
+        url:"/run_simulation",
+        method:"post"
+    })
+}
+export function getExternalModule(){
+    request({
+        url:"/getexternalmodule",
+        method:"post"
+    })
+}

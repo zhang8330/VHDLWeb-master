@@ -31,7 +31,7 @@
 <!--      <back-btn class="left-button" to="/upload/atomic">Back</back-btn>-->
 <!--      <next-step-btn class="right-button" to="/generate/sub">Next Step</next-step-btn>-->
       <back-btn class="left-button" to="/upload/main">Back</back-btn>
-      <next-step-btn class="right-button" to="/generate/atom">Next Step</next-step-btn>
+      <next-step-btn class="right-button" to="/controllerVhdl">Next Step</next-step-btn>
     </div>
   </div>
 </template>

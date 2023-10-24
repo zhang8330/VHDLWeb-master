@@ -1,9 +1,9 @@
 <template>
   <div class="container">
 <!--    <h1 class="hint">Step 1.2: <br>Please Upload the Predefined Device Models Of Your System.</h1>-->
-    <h1 class="hint" v-show="AddOrShow==='add'">Step 1.1: <br>&nbsp;Please Upload the Predefined Device Models Of Your System.</h1>
-    <h1 class="hint" v-show="AddOrShow==='show'">Step 1.2: <br>&nbsp;Show all the devices.</h1>
-    <h1 class="hint" v-show="AddOrShow==='delete'">Step 1.3: <br>&nbsp;Please enter the name and type of the device you want to delete.</h1>
+    <h1 class="hint" v-show="AddOrShow==='add'"><br>&nbsp;Please Upload the Predefined Device Models Of Your System.</h1>
+    <h1 class="hint" v-show="AddOrShow==='show'"><br>&nbsp;Show all the devices.</h1>
+    <h1 class="hint" v-show="AddOrShow==='delete'"><br>&nbsp;Please enter the name and type of the device you want to delete.</h1>
 <!--    <h2 >If your system does not have device models, ignore this step.</h2>-->
 <!--    <p>The Sub Controller Specification Demo is as follows</p>-->
 <!--    <vhdl-editor></vhdl-editor>-->

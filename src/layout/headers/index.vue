@@ -62,7 +62,8 @@
 <!--            <el-menu-item index="/upload/sub" class="sub-menu-item">Show the data</el-menu-item>-->
 <!--          </el-sub-menu>-->
           <!--    <el-menu-item index="/assemble" style="border: 0px">Assemble Total System</el-menu-item>-->
-          <el-menu-item index="4" @click="this.$router.push('/download')" style="background-color: transparent !important;">Download</el-menu-item>
+<!--          <el-menu-item index="4" @click="this.$router.push('/download')" style="background-color: transparent !important;">Download</el-menu-item>-->
+          <el-menu-item  @click="download" style="background-color: transparent !important;">Download</el-menu-item>
           <el-menu-item index="5" @click="this.$router.push('/assembleSystem')" style="background-color: transparent !important;">Assemble System</el-menu-item>
           <el-sub-menu index="6">
             <template #title>Verify</template>
@@ -80,6 +81,8 @@
 
 <script >
 
+import {downloadAtomSystemVHDLCode} from "@/api/download";
+
 export default {
   data() {
     return{
@@ -90,6 +93,23 @@ export default {
     handleSelect(index){
       this.activeIndex = index
       this.$router.push(index)
+    },
+    download() {
+      downloadAtomSystemVHDLCode()
+          .then( response => {
+            const url = window.URL.createObjectURL(response.data);
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', "AtomSystemVhdl.zip"); // 设置要保存的文件名
+            document.body.appendChild(link);
+            setTimeout(function(){
+              link.click();
+              document.body.removeChild(link);
+            },1000)
+          })
+          .catch(error => {
+            console.error('文件下载失败', error);
+          });
     }
   }
 }

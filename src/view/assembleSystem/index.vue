@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <h1 class="hint">Step *7: <br>Integrate system.</h1>
+    <h1 class="hint"><br>Assemble System.</h1>
   </div>
   <assemble-system/>
-  <div class="button-container">
-    <back-btn class="left-button" to="/controllerVhdl">Back</back-btn>
-    <next-step-btn class="right-button" to="/getSimulationStructure">Next Step</next-step-btn>
-  </div>
+<!--  <div class="button-container">-->
+<!--    <back-btn class="left-button" to="/controllerVhdl">Back</back-btn>-->
+<!--    <next-step-btn class="right-button" to="/getSimulationStructure">Next Step</next-step-btn>-->
+<!--  </div>-->
 </template>
 
 <script>
