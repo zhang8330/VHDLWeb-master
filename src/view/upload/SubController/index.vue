@@ -1,19 +1,18 @@
 <template>
   <div class="container">
-<!--    <h1 class="hint">Step 1.2: <br>Please Upload the Predefined Device Models Of Your System.</h1>-->
-    <h1 class="hint" v-show="AddOrShow==='add'"><br>&nbsp;Please Upload the Predefined Device Models Of Your System.</h1>
-    <h1 class="hint" v-show="AddOrShow==='show'"><br>&nbsp;Show all the devices.</h1>
-    <h1 class="hint" v-show="AddOrShow==='delete'"><br>&nbsp;Please enter the name and type of the device you want to delete.</h1>
-<!--    <h2 >If your system does not have device models, ignore this step.</h2>-->
-<!--    <p>The Sub Controller Specification Demo is as follows</p>-->
-<!--    <vhdl-editor></vhdl-editor>-->
-<!--    <uploadPDM class="upload-file"></uploadPDM>-->
-    <div id="toggleBox" v-show="flag" >
-      <p>You can</p>
-      <p><el-button type="primary" @click="AddOrShow='add', flag=false" style="font-size: 19px;margin-left:110px; border:3px outset;box-shadow: 0 0 0 2px rgb(147,169,253);"><el-icon><DocumentAdd /></el-icon>&nbsp;Add new devices</el-button></p>
-      <p><el-button type="primary" @click="AddOrShow='show', flag=false" style="font-size: 19px;margin-left:110px;border:3px outset;box-shadow: 0 0 0 2px rgb(147,169,253);"><el-icon><Reading /></el-icon>&nbsp;Show all the devices</el-button></p>
-      <p><el-button type="primary" @click="AddOrShow='delete', flag=false" style="font-size: 19px;margin-left:110px;border:3px outset;box-shadow: 0 0 0 2px rgb(147,169,253);"><el-icon><Delete /></el-icon>&nbsp;Delete devices</el-button></p>
+    <h1 class="hint">Step 1: <hr/>Upload of the device model library<br></h1>
+    <div style="margin:50px 0 0 10px;">
+      <el-radio-group v-model="radio1" size="large" >
+        <el-radio-button label="Upload" @click="AddOrShow='add', flag=false" />
+        <el-radio-button label="Show" @click="AddOrShow='show', flag=false" />
+        <el-radio-button label="Delete" @click="AddOrShow='delete', flag=false" />
+      </el-radio-group>
     </div>
+    <hr/>
+<!--    <h1 class="hint">Step 1.2: <br>Please Upload the Predefined Device Models Of Your System.</h1>-->
+    <h3  v-show="AddOrShow==='add'"><br>&nbsp;Please Upload the Predefined Device Models Of Your System.</h3>
+    <h3  v-show="AddOrShow==='show'"><br>&nbsp;Show all the devices.</h3>
+    <h3  v-show="AddOrShow==='delete'"><br>&nbsp;Please enter the name and type of the device you want to delete.</h3>
       <div v-if="(AddOrShow === 'add')">
         <upload-device></upload-device>
       </div>
@@ -38,13 +37,15 @@ import UploadDevice from "@/components/uploadDevice/uploadDevice.vue";
 import ShowAllDevices from "@/components/showAllDevices/showAllDevices.vue";
 import DeleteDevice from "@/components/deleteDevice/deleteDevice.vue";
 import {Delete, DocumentAdd, Reading} from "@element-plus/icons-vue";
+import { ref } from 'vue'
 export default {
   name: "SubController",
   components: {DocumentAdd, Reading, Delete, DeleteDevice, ShowAllDevices, UploadDevice, uploadPDM},
   data(){
     return {
       AddOrShow:"main",
-      flag:true
+      flag:true,
+      radio1:ref('New York')
     }
   }
 }
@@ -62,24 +63,6 @@ export default {
   margin:0 auto;
 }
 
-#toggleBox{
-  display:flex;
-  width:500px;
-  height:240px;
-  margin: 180px auto;
-  padding: 20px;
-  /*text-align: center;*/
-  /*line-height:150px;*/
-  /*vertical-align: center;*/
-  font-size: 19px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  border:5px outset  ;
-  border-radius: 10px;
-  box-shadow: 0 0 0 10px rgb(147,169,253);
-  /*background-color: #97ABFF;*/
-}
 el-icon{
   vertical-align: center;
   margin: 0 auto;
@@ -89,9 +72,6 @@ el-icon{
   font-size: 30px;
 }
 
-#toggleBox p el-button{
-  margin-left:150px;
-}
 
 .button-container{
   margin-top:40px;

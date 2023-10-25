@@ -14,11 +14,8 @@
       style="max-width: 460px;padding-top:35px;"
   >
     <el-form-item label="Device_name">
-      <el-input v-model.trim="device.name" />
+      <el-input v-model.trim="device.name" placeholder="Please enter a device name"/>
     </el-form-item>
-<!--    <el-form-item label="device_type">-->
-<!--      <el-input v-model="device.type" />-->
-<!--    </el-form-item>-->
     <el-form-item label="Device_type">
       <el-radio-group v-model="device.type">
         <el-radio label="causal_domain" />

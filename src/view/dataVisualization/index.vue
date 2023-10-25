@@ -1,9 +1,8 @@
 <template>
   <div class="container">
-    <h1 class="hint">Step 6: Generation of simulation results<br></h1>
+    <h1 class="hint">Step 7: Generation of data visualizations<br></h1>
     <div class="button-container">
-      <back-btn class="left-button" to="/controllerVhdl">Back</back-btn>
-      <next-step-btn class="right-button" to="/dataVisualization">Next Step</next-step-btn>
+      <back-btn class="left-button" to="/simulationResult">Back</back-btn>
     </div>
   </div>
 </template>

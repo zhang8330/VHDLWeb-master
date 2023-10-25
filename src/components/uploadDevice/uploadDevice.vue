@@ -7,9 +7,9 @@
       v-show="errorOrNot"
   />
   <div class="box" style="margin: 30px">
-    <el-form :model="form" label-width="100px">
+    <el-form :model="form" label-width="80px">
       <el-form-item label="Device_name">
-        <el-input v-model.trim="form.name" />
+        <el-input v-model.trim="form.name" placeholder="Please enter a device name"/>
       </el-form-item>
       <el-form-item label="Device_type">
         <el-radio-group v-model="form.type">
@@ -21,11 +21,11 @@
         <el-form-item>
           <br>
         </el-form-item>
-        <el-form-item label="Port_name" style="width:100%;margin-left: 80px">
-          <el-input v-model="form.key" style="width:50%"/>
+        <el-form-item label="Port_name" style="width:100%;margin-left: 80px" >
+          <el-input v-model="form.key" style="width:50%" placeholder="Please enter a port name"/>
         </el-form-item>
-        <el-form-item label="Specification_name"   style="width:100%;margin-left: 80px">
-          <el-input v-model="form.value" style="width:50%"/>
+        <el-form-item label="Specification_name"   style="width:100%;margin-left: 80px" >
+          <el-input v-model="form.value" style="width:50%"  placeholder="Please enter a specification name"/>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="add" style="margin:5px 300px;">Add</el-button>

@@ -91,7 +91,7 @@ div{
 }
 #buttonBox{
   position:absolute;
-  top:200px;
+  top:290px;
   left:30px;
   width:200px;
   height:100px;
