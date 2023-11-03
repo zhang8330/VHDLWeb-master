@@ -1,11 +1,17 @@
 <template>
-  <el-alert
-      title="ERROR"
-      type="error"
-      description="Device_name, Device_type and Device_file cannot be empty!"
-      show-icon
-      v-show="errorOrNot"
-  />
+  <el-dialog v-model="errorOrNot" title="Warning" width="30%" center>
+    <span>
+     Device_name, Device_type and Device_file cannot be empty!
+    </span>
+    <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="errorOrNot = false">Cancel</el-button>
+        <el-button type="primary" @click="errorOrNot = false">
+          Confirm
+        </el-button>
+      </span>
+    </template>
+  </el-dialog>
   <div class="box" style="margin: 30px">
     <el-form :model="form" label-width="80px">
       <el-form-item label="Device_name">
@@ -62,6 +68,7 @@
 import {UploadFilled} from "@element-plus/icons-vue";
 import {uploadDevice} from "@/api/upload";
 import async from "async";
+import { ref } from 'vue'
 
 export default {
   name: "uploadDevice",

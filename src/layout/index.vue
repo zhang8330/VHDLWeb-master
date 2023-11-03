@@ -1,18 +1,34 @@
 <template>
   <div class="common-layout">
   <el-container class="container">
-    <el-header><Headers/></el-header>
+    <el-header><Headers /></el-header>
     <el-container>
-      <el-main style="height: 100%"><router-view/></el-main>
-      <el-aside style="margin-right:5px;height: 100%" width="380px"><process/></el-aside>
+      <el-main style="height: 100%;margin-left: 35px;"><router-view/></el-main>
+      <el-drawer v-model="getDrawer" title="I am the title" :with-header="false">
+        <el-aside style="width:90%"><process/></el-aside>
+      </el-drawer>
     </el-container>
   </el-container>
   </div>
 </template>
 
-<script setup>
+<script >
 import Headers from './headers'
 import Process from "@/components/process.vue";
+export default {
+  data(){
+    return {
+      drawer:false,
+    }
+  },
+  components: {Headers,Process},
+  computed:{
+    getDrawer(){
+      return this.$store.state.app.drawer;
+    }
+  }
+}
+
 </script>
 
 <style scoped>

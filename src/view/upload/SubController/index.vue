@@ -26,7 +26,7 @@
     <div class="button-container">
 <!--      <back-btn class="left-button" to="/upload/main">Back</back-btn>-->
 <!--      <next-step-btn class="right-button" to="/generate/main">Next Step</next-step-btn>-->
-      <back-btn class="left-button" to="/upload/sub" @click="AddOrShow='main', flag = true">Back</back-btn>
+      <back-btn class="left-button" to="/upload/sub" @click="AddOrShow='main',flag = true,radio1='New Work' ">Back</back-btn>
       <next-step-btn class="right-button" to="/upload/main" v-show="AddOrShow === 'main'">Next Step</next-step-btn>
     </div>
 

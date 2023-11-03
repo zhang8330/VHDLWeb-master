@@ -69,6 +69,7 @@
             <template #title>Verify</template>
             <el-menu-item index="/propertyVerification" class="sub-menu-item">Property verification of interface conformance</el-menu-item>
           </el-sub-menu>
+          <el-menu-item  @click="changeDrawer()" style="background-color: transparent !important;">Step</el-menu-item>
 
           <!--    <el-menu-item index="/help" >Help</el-menu-item>-->
           <!--    <el-menu-item index="6" style="border: 0px">Login</el-menu-item>-->
@@ -82,7 +83,7 @@
 <script >
 
 import {downloadAtomSystemVHDLCode} from "@/api/download";
-
+import { ref } from 'vue'
 export default {
   data() {
     return{
@@ -91,8 +92,11 @@ export default {
   },
   methods: {
     handleSelect(index){
-      this.activeIndex = index
-      this.$router.push(index)
+      this.activeIndex = index;
+      this.$router.push(index);
+    },
+    changeDrawer(drawer){
+      this.$store.commit("app/changeDrawer",!drawer);
     },
     download() {
       downloadAtomSystemVHDLCode()

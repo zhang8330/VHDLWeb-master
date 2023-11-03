@@ -1,11 +1,17 @@
 <template>
-  <el-alert
-      title="ERROR"
-      type="error"
-      description="Device_name and Device_type cannot be empty!"
-      show-icon
-      v-show="errorOrNot"
-  />
+  <el-dialog v-model="errorOrNot" title="Warning" width="30%" center>
+    <span>
+     Device_name and Device_type cannot be empty!
+    </span>
+    <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="errorOrNot = false">Cancel</el-button>
+        <el-button type="primary" @click="errorOrNot = false">
+          Confirm
+        </el-button>
+      </span>
+    </template>
+  </el-dialog>
   <div class="form">
   <el-form
       :label-position="labelPosition"
@@ -31,6 +37,7 @@
 <script>
 import { reactive, ref } from 'vue'
 import {deleteDevice} from "@/api/delete";
+
 const labelPosition = ref('right')
 export default {
   name: "deleteDevice",

@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <h1 class="hint">Step 7: Generation of data visualizations<br></h1>
+    <get-external-module style="width:20%;"></get-external-module>
     <div class="button-container">
       <back-btn class="left-button" to="/simulationResult">Back</back-btn>
     </div>
@@ -8,8 +9,11 @@
 </template>
 
 <script>
+import GetExternalModule from "@/components/getExternalModule/getExternalModule.vue";
+
 export default {
-  name: "index"
+  name: "index",
+  components: {GetExternalModule}
 }
 </script>
 

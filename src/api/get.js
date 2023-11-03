@@ -14,7 +14,7 @@ export function runSimulation(){
     })
 }
 export function getExternalModule(){
-    request({
+    return request({
         url:"/getexternalmodule",
         method:"post"
     })
