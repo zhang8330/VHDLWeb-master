@@ -70,7 +70,7 @@
             <el-menu-item index="/propertyVerification" class="sub-menu-item">Property verification of interface conformance</el-menu-item>
           </el-sub-menu>
           <el-menu-item    style="background-color: transparent !important;">
-            <el-button class = 'clickBtn' @click="runSimulation()">Run</el-button>
+            <el-button class = 'clickBtn' @click="run()">Run</el-button>
             <el-button class = 'clickBtn' @click="changeDrawer()">Step</el-button>
           </el-menu-item>
 
@@ -93,7 +93,7 @@ export default {
     }
   },
   methods: {
-    runSimulation(){
+    run(){
       runSimulation().then(()=>{
         ElMessage.success("success!");
       }).catch((error)=>{
