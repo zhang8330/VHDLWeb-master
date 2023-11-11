@@ -1,19 +1,37 @@
 <template>
   <div class="container">
     <h1 class="hint">Step 7: Generation of data visualizations<br></h1>
-    <get-external-module style="width:20%;"></get-external-module>
+    <div style="display:flex;">
+      <get-external-module @data-update="getName" :devicename="devicename" style="width:20%;"></get-external-module>
+      <show-external-model :devicename="devicename"></show-external-model>
+    </div>
     <div class="button-container">
-      <back-btn class="left-button" to="/simulationResult">Back</back-btn>
+      <back-btn class="left-button" to="/controllerVhdl">Back</back-btn>
     </div>
   </div>
 </template>
 
 <script>
 import GetExternalModule from "@/components/getExternalModule/getExternalModule.vue";
+import ShowModel from "@/components/simulationStructure/showModel.vue";
+import ShowExternalModel from "@/components/showExternalModule/showExternalModel.vue";
 
 export default {
   name: "index",
-  components: {GetExternalModule}
+  components: {ShowExternalModel, ShowModel, GetExternalModule},
+  data(){
+    return {
+      path:"",
+      devicename:""
+    }
+  },
+
+  methods:{
+    getName(path,name){
+      this.path = path;
+      this.devicename = name;
+    }
+  }
 }
 </script>
 

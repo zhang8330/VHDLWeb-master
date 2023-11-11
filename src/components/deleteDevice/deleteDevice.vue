@@ -60,10 +60,10 @@ export default {
         formData.append("name",this.device.name);
         formData.append("device_type",this.device.type);
         deleteDevice(formData).then(res=>{
-          console.log(res);
+          //console.log(res);
           ElMessage.success("Successfully deleted");
         }).catch(error=>{
-          console.log(error);
+          console.log("from deleteDevice",error);
           ElMessage.warning("Deletion failure");
         })
       }else{

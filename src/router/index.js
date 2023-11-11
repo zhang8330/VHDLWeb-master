@@ -89,11 +89,6 @@ const routes = [
                 component: () => import('../view/propertyVerification')
             },
             {
-                path: '/simulationResult',
-                name: '/simulationResult',
-                component: () => import('../view/simulationResult')
-            },
-            {
                 path: '/dataVisualization',
                 name: '/dataVisualization',
                 component: () => import('../view/dataVisualization')

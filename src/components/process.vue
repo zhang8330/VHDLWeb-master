@@ -5,34 +5,40 @@
         <a class="process-link" title="Step1"><h3>Step</h3></a>
         <ul>
           <li class="is-process-item">
-            <a class="process-link" title="Upload of the device model library">&nbsp;1. Upload of the device model library</a>
+            <a class="process-link" title="Upload the library of device models">&nbsp;1. Upload the library of device models</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Upload of the requirements specification document">&nbsp;2. Upload of the requirements specification document</a>
+            <a class="process-link" title="Upload the requirements specification document">&nbsp;2. Upload the requirements specification document</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Completion of computing component information">&nbsp;3. Completion of computing component information</a>
+            <a class="process-link" title="Prototypes of atomic problems">&nbsp;3. Prototypes of atomic problems</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Generation of atomic systems">&nbsp;4. Generation of atomic systems</a>
+            <a class="process-link" title="Generate prototype code for atomic problems">&nbsp;&nbsp;&nbsp;3.1. Generate prototype code for atomic problems</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Generation of combination controllers">&nbsp;5. Generation of combination controllers</a>
+            <a class="process-link" title="Complete the computing component information">&nbsp;&nbsp;&nbsp;3.2. Complete the computing component information</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Generation of controller vhdl code">&nbsp;&nbsp;&nbsp;5.1. Generation of controller vhdl code</a>
+            <a class="process-link" title="Generate prototypes of atomic problems">&nbsp;&nbsp;&nbsp;3.3. Generate prototypes of atomic problems</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="completion of the controller vhdl code">&nbsp;&nbsp;&nbsp;5.2. Completion of the controller vhdl code</a>
+            <a class="process-link" title="Prototypes of composite controllers">&nbsp;4. Prototypes of composite controllers</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Generation of combination controllers">&nbsp;&nbsp;&nbsp;5.3. Generation of controller IP core</a>
+            <a class="process-link" title="Generate the composite controller vhdl code">&nbsp;&nbsp;&nbsp;4.1. Generate the composite controller vhdl code</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Generation of simulation results">&nbsp;6. Generation of simulation results</a>
+            <a class="process-link" title="Complete the composite controller vhdl code">&nbsp;&nbsp;&nbsp;4.2. Complete the composite controller vhdl code</a>
           </li>
           <li class="is-process-item">
-            <a class="process-link" title="Generation of data visualizations">&nbsp;7. Generation of data visualizations</a>
+            <a class="process-link" title="Generate prototypes of composite controllers">&nbsp;&nbsp;&nbsp;4.3. Generate prototypes of composite controllers</a>
+          </li>
+          <li class="is-process-item">
+            <a class="process-link" title="Generate prototypes of data storage">&nbsp;5. Generate prototypes of data storage </a>
+          </li>
+          <li class="is-process-item">
+            <a class="process-link" title="Generate the simulation results and the data visualizations">&nbsp;6. Generate the simulation results and the data visualizations </a>
           </li>
         </ul>
       </li>

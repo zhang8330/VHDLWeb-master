@@ -81,7 +81,7 @@ export default {
       generateController(data).then(res=>{
             this.response = res.data;
             delete this.response[".gitkeep"];
-        console.log(this.response)
+            //console.log(this.response)
             this.length = Object.keys(this.response).length;
             this.key = Object.keys(this.response)[this.index];
             this.code = this.response[this.key];

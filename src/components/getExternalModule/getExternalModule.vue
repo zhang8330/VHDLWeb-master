@@ -1,16 +1,34 @@
 <template>
-  <el-tree :data="data" />
+  <el-tree :data="data"  @node-click="getDeviceName"/>
 </template>
 
 <script>
 import {getExternalModule} from "@/api/get";
 
 export default {
+  props:["devicename"],
   name: "getExternalModule",
   data() {
     return {
-      data: []
+      data: [],
+      devicename:"",
+      path:""
     }
+  },
+  methods:{
+    getDeviceName(data){
+      if(data.children == undefined){
+        this.devicename = data["label"];
+        this.$emit("data-update",this.path, this.devicename);
+      }
+    },
+
+    getName() {
+      this.$emit("data-update",this.path, this.devicename);
+    }
+  },
+  watch:{
+
   },
   mounted() {
       getExternalModule().then(res=>{
@@ -21,8 +39,8 @@ export default {
         ElMessage.warning("failed!");
       })
   },
-  methods:{
-
+  beforeUnmount() {
+    // 移除全局点击事件监听
   }
 }
 </script>

@@ -3,7 +3,7 @@
   <controller-vhdl/>
   <div class="button-container">
     <back-btn class="left-button" to="/generate/atom">Back</back-btn>
-    <next-step-btn class="right-button" to="/simulationResult">Next Step</next-step-btn>
+    <next-step-btn class="right-button" to="/dataVisualization">Next Step</next-step-btn>
   </div>
 </template>
 

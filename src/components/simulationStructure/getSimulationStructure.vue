@@ -56,7 +56,6 @@ export default {
       return null;
     },
     getName() {
-
       this.$emit("data-update",this.path, this.devicename);
       this.hidePopup();
     }

@@ -69,10 +69,11 @@
             <template #title>Verify</template>
             <el-menu-item index="/propertyVerification" class="sub-menu-item">Property verification of interface conformance</el-menu-item>
           </el-sub-menu>
-          <el-menu-item  @click="changeDrawer()" style="background-color: transparent !important;">Step</el-menu-item>
+          <el-menu-item    style="background-color: transparent !important;">
+            <el-button class = 'clickBtn' @click="runSimulation()">Run</el-button>
+            <el-button class = 'clickBtn' @click="changeDrawer()">Step</el-button>
+          </el-menu-item>
 
-          <!--    <el-menu-item index="/help" >Help</el-menu-item>-->
-          <!--    <el-menu-item index="6" style="border: 0px">Login</el-menu-item>-->
         </el-menu>
       </div>
 
@@ -84,6 +85,7 @@
 
 import {downloadAtomSystemVHDLCode} from "@/api/download";
 import { ref } from 'vue'
+import {runSimulation} from "@/api/get";
 export default {
   data() {
     return{
@@ -91,6 +93,14 @@ export default {
     }
   },
   methods: {
+    runSimulation(){
+      runSimulation().then(()=>{
+        ElMessage.success("success!");
+      }).catch((error)=>{
+        ElMessage.warning("failed!");
+        console.log(error);
+      })
+    },
     handleSelect(index){
       this.activeIndex = index;
       this.$router.push(index);
@@ -149,6 +159,12 @@ export default {
 }
 .el-menu-item{
   color: #ffffff;
+}
+.clickBtn{
+  margin-top: 12px;
+  background-color: transparent;
+  color: white;
+  line-height:50px;
 }
 </style>
 <style>

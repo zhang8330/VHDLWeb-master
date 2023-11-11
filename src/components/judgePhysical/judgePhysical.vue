@@ -87,9 +87,9 @@ export default {
         filename:this.key,
         txt:this.code
       };
-      console.log(data)
+      //console.log(data)
       completePhysical(data).then(res=>{
-        console.log(res)
+        //console.log(res)
         ElMessage.success("complete success!");
         this.whetherGenerate = true
       }).catch(error=>{
