@@ -2,8 +2,8 @@
   <div   @contextmenu="showPopup" @click="hidePopup" style="width:80%;margin:20px;padding: 5px;" id="contentBox" v-loading="isReady">
     <p style="text-align: center;margin: 2px;"><el-tag style="font-size: 25px;">Module</el-tag></p>
     <el-tree :data="data" />
-    <div v-show="isPopupVisible" :style="{ left: popupPosition.x + 'px', top: popupPosition.y + 'px' }" class="popup">
-      <ul>
+    <div style="border:1px inset;border-radius: 2px;box-shadow: 0 0 0 1px rgb(147,169,253);" v-show="isPopupVisible" :style="{ left: popupPosition.x + 'px', top: popupPosition.y + 'px'}" class="popup">
+      <ul style="">
         <li @click="getName">Show the model</li>
       </ul>
     </div>

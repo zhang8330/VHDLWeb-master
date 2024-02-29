@@ -1,7 +1,7 @@
 <template>
   <div style="margin-top: 50px;">
     <p style="text-align: center;margin:5px auto;">
-      <span style="margin-left:200px;"><el-tag style="font-size: 22px;">Name:</el-tag>{{ devicename }}</span>
+      <span style="margin-left:35px;"><el-tag style="font-size: 22px;">Name:</el-tag>{{ devicename }}</span>
     </p>
     <div id="container" v-loading = "isReady">
       <div id="con_left">
@@ -52,7 +52,6 @@ export default {
         formdata.append("name", newVal);
         showExternalModule(formdata).then(res => {
           this.devices = res.data.devices;
-          console.log(res);
           ElMessage.success("success!");
           this.isReady = false;
         }).catch(error => {

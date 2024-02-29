@@ -14,16 +14,16 @@
   </el-dialog>
   <div class="box" style="margin: 30px">
     <el-form :model="form" label-width="80px">
-      <el-form-item label="Device_name">
+      <el-form-item label="Device_name" style="font-weight:bold;" >
         <el-input v-model.trim="form.name" placeholder="Please enter a device name"/>
       </el-form-item>
-      <el-form-item label="Device_type">
-        <el-radio-group v-model="form.type">
-          <el-radio label="causal_domain" />
-          <el-radio label="biddable_domain" />
+      <el-form-item label="Device_type" style="font-weight:bold;">
+        <el-radio-group v-model="form.type" >
+          <el-radio label="causal_domain"/>
+          <el-radio label="biddable_domain"/>
         </el-radio-group>
       </el-form-item>
-      <el-form-item label="Port_properties" style="">
+      <el-form-item label="Port_properties" style="font-weight:bold;width:100%;margin-left: 80px">
         <el-form-item>
           <br>
         </el-form-item>
@@ -37,7 +37,7 @@
           <el-button type="primary" @click="add" style="margin:5px 300px;">Add</el-button>
         </el-form-item>
       </el-form-item>
-      <el-form-item label="Device_file">
+      <el-form-item label="Device_file"  style="font-weight:bold;">
         <el-radio-group v-model="form.dev">
           <el-upload
               class="upload-demo"

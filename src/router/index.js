@@ -5,7 +5,7 @@ const routes = [
         path: '/',
         name: '/',
         component: () => import('../layout'),
-        redirect:"/upload/main",
+        redirect:"/upload/devLib",
         //redirect:"/getSimulationStructure",
         children:[
             {
@@ -18,15 +18,20 @@ const routes = [
                 name: '/upload/main',
                 component: () => import('../view/upload/MainController')
             },
-            {
-                path: '/upload/sub',
-                name: '/upload/sub',
-                component: () => import('../view/upload/SubController')
-            },
+            // {
+            //     path: '/upload/sub',
+            //     name: '/upload/sub',
+            //     component: () => import('../view/upload/SubController')
+            // },
             {
                 path: '/upload/atomic',
                 name: '/upload/atomic',
                 component: () => import('../view/upload/Atomic')
+            },
+            {
+                path: '/upload/devLib',
+                name: '/upload/devLib',
+                component: () => import('../view/upload/DeviceLibrary')
             },
             {
                 path: '/generate/main',
@@ -84,7 +89,7 @@ const routes = [
                 component: () => import('../view/getSimulationStructure')
             },
             {
-                path: '/propertyVerification',
+                path: '/propertyVerifiation',
                 name: '/propertyVerification',
                 component: () => import('../view/propertyVerification')
             },

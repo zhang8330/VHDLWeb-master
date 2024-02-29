@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <h1 class="hint" v-show="!whetherNeed && !whetherGenerate">Step 5.1: <br>Generate controller vhdl code.</h1>
-    <h1 class="hint" v-show="whetherNeed && !whetherGenerate">Step 5.2: <br>Complete the controller vhdl code.</h1>
-    <h1 class="hint" v-show="whetherGenerate && whetherNeed">Step 5.3: <br>Generate controller IP core.</h1>
+    <h1 class="hint" v-show="!whetherNeed && !whetherGenerate">Step 4.1: <br>Generate the composite controller vhdl code.</h1>
+    <h1 class="hint" v-show="whetherNeed && !whetherGenerate">Step 4.2: <br>Complete the composite controller vhdl code.</h1>
+    <h1 class="hint" v-show="whetherGenerate && whetherNeed">Step 4.3: <br>Generate prototypes of composite controllers.</h1>
   </div>
   <div style="margin-left:125px;">
     <h4 style="margin-top: 5px;font-weight: normal">{{this.key}} ({{this.index+"/"+this.length}})</h4>

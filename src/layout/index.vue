@@ -3,10 +3,10 @@
   <el-container class="container">
     <el-header><Headers /></el-header>
     <el-container>
-      <el-main style="height: 100%;margin-left: 35px;"><router-view/></el-main>
-      <el-drawer v-model="getDrawer" title="I am the title" :with-header="false">
-        <el-aside style="width:90%"><process/></el-aside>
-      </el-drawer>
+<!--      <el-drawer v-model="getDrawer" title="I am the title" :with-header="false">-->
+        <el-aside style="width: 28%;"><process/></el-aside>
+<!--      </el-drawer>-->
+      <el-main style="width: 72%;height: 100%;"><router-view/></el-main>
     </el-container>
   </el-container>
   </div>
@@ -23,9 +23,9 @@ export default {
   },
   components: {Headers,Process},
   computed:{
-    getDrawer(){
-      return this.$store.state.app.drawer;
-    }
+    // getDrawer(){
+    //   return this.$store.state.app.drawer;
+    // }
   }
 }
 

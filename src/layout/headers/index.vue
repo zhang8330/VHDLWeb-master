@@ -1,7 +1,7 @@
 <template>
   <div aria-label="A complete example of page header" class="page-header">
       <div class="flex items-center">
-        <div id="img" @click="this.$router.push('/upload/main')" style="width: 90px; height: 62px">
+        <div id="img" @click="this.$router.push('/upload/devLib')" style="width: 90px; height: 62px">
           <el-image :src="require('@/assets/logo.png')"  style="width: 90px; height: 62px" ></el-image>
         </div>
         <div id="project-title" style="cursor:default;">
@@ -10,77 +10,47 @@
         </div>
         <el-menu
             :default-active="activeIndex"
-            class="el-menu-demo"
             mode="horizontal"
             :ellipsis="false"
-            text-color="#000"
-            on-select="handleSelect"
+            text-color="#fff"
             style="background-color: transparent"
             router
         >
-          <!--    <el-menu-item index="0" @click="this.$router.push('/upload/sub')">-->
-          <!--      <el-image :src="require('@/assets/logo.png')" style="width: 90px; height: 62px" ></el-image>-->
-          <!--    </el-menu-item>-->
-          <!--    <el-menu-item>-->
-          <!--      基于软件IP的需求描述语言仿真工具 Simulation tool of requirement description language based on software IP-->
-          <!--    </el-menu-item>-->
-          <!--    <el-sub-menu index="1">-->
-          <!--      <template #title>Upload Specification</template>-->
-          <!--      <el-menu-item index="/upload/main">Upload Main Controller Specification</el-menu-item>-->
-          <!--      <el-menu-item index="/upload/sub">Upload Sub Controller Specification</el-menu-item>-->
-          <!--      <el-menu-item index="/upload/atomic">Upload Atomic System Code </el-menu-item>-->
-          <!--    </el-sub-menu>-->
-          <el-sub-menu index="0" style="background-color: transparent;">
-            <template #title >
-              Device
-            </template>
-            <el-menu-item index="/upload/sub" class="sub-menu-item">Add new devices</el-menu-item>
-            <el-menu-item index="/upload/sub" class="sub-menu-item">Show all the devices</el-menu-item>
-            <el-menu-item index="/upload/sub" class="sub-menu-item">Delete devices</el-menu-item>
-          </el-sub-menu>
-<!--          <el-sub-menu index="1">-->
-<!--            <template #title>-->
-<!--              Physical data-->
+<!--          <el-sub-menu index="0" >-->
+<!--            <template #title >-->
+<!--              Device-->
 <!--            </template>-->
-<!--            <el-menu-item index="/physical/JudgeAndCompleteAndGenerate" class="sub-menu-item">Determine whether the physical data storage needs to be completed</el-menu-item>-->
-<!--            <el-menu-item index="/physical/JudgeAndCompleteAndGenerate" class="sub-menu-item">Complete the physical data storage</el-menu-item>-->
-<!--            <el-menu-item index="/physical/JudgeAndCompleteAndGenerate" class="sub-menu-item">Generate the physical data storage IP core</el-menu-item>-->
+<!--            <el-menu-item index="/upload/devLib">Upload</el-menu-item>-->
+<!--            <el-menu-item index="/upload/devLib">Show</el-menu-item>-->
+<!--            <el-menu-item index="/upload/devLib">Delete</el-menu-item>-->
 <!--          </el-sub-menu>-->
-          <el-sub-menu index="2">
-            <template #title>Controller</template>
-            <el-menu-item index="/controllerVhdl" class="sub-menu-item">Generate controller vhdl code</el-menu-item>
-            <el-menu-item index="/controllerVhdl" class="sub-menu-item">Complete the controller vhdl code</el-menu-item>
-            <el-menu-item index="/controllerVhdl" class="sub-menu-item">Generate controller IP core</el-menu-item>
-          </el-sub-menu>
-          <el-menu-item index="3" @click="this.$router.push('/getSimulationStructure')"  style="background-color: transparent !important;">Simulation</el-menu-item>
-<!--          <el-sub-menu index="3">-->
-<!--            <template #title>-->
-<!--              <span class="subSpan" style="color:#ffffff;background-color: transparent">Simulation</span>-->
-<!--            </template>-->
-<!--            <el-menu-item index="/upload/sub" class="sub-menu-item">Get the simulation structure</el-menu-item>-->
-<!--            <el-menu-item index="/upload/sub" class="sub-menu-item">Show the model</el-menu-item>-->
-<!--            <el-menu-item index="/upload/sub" class="sub-menu-item">Show the data</el-menu-item>-->
+<!--          <el-sub-menu index="2">-->
+<!--            <template #title>Controller</template>-->
+<!--            <el-menu-item index="/controllerVhdl"> Generate the composite controller vhdl code</el-menu-item>-->
+<!--            <el-menu-item index="/controllerVhdl"> Complete the composite controller vhdl code</el-menu-item>-->
+<!--            <el-menu-item index="/controllerVhdl"> Generate prototypes of composite controllers</el-menu-item>-->
 <!--          </el-sub-menu>-->
-          <!--    <el-menu-item index="/assemble" style="border: 0px">Assemble Total System</el-menu-item>-->
-<!--          <el-menu-item index="4" @click="this.$router.push('/download')" style="background-color: transparent !important;">Download</el-menu-item>-->
-          <el-menu-item  @click="download" style="background-color: transparent !important;">Download</el-menu-item>
-          <el-menu-item index="5" @click="this.$router.push('/assembleSystem')" style="background-color: transparent !important;">Assemble System</el-menu-item>
-          <el-sub-menu index="6">
-            <template #title>Verify</template>
-            <el-menu-item index="/propertyVerification" class="sub-menu-item">Property verification of interface conformance</el-menu-item>
-          </el-sub-menu>
-          <el-menu-item    style="background-color: transparent !important;">
-            <el-button class = 'clickBtn' @click="run()">Run</el-button>
-            <el-button class = 'clickBtn' @click="changeDrawer()">Step</el-button>
-          </el-menu-item>
 
+<!--          <el-sub-menu index="3">-->
+<!--            <template #title>Simulation</template>-->
+<!--            <el-menu-item index="/getSimulationStructure">Get simulation structure</el-menu-item>-->
+<!--            <el-menu-item index="/dataVisualization">Generate the simulation results and the data visualizations</el-menu-item>-->
+<!--          </el-sub-menu>-->
+          <el-menu-item>Simuation</el-menu-item>
+<!--          <el-sub-menu index="5">-->
+<!--            <template #title >Function</template>-->
+<!--            <el-menu-item  @click="download">Download</el-menu-item>-->
+<!--            <el-menu-item @click="this.$router.push('/assembleSystem')">Assemble System</el-menu-item>-->
+<!--&lt;!&ndash;            <el-menu-item  @click="changeDrawer()" style="background-color: transparent !important;">Show step</el-menu-item>&ndash;&gt;-->
+<!--          </el-sub-menu>-->
+<!--          <el-sub-menu index="6">-->
+<!--            <template #title>Verify</template>-->
+<!--            <el-menu-item index="/propertyVerification" class="sub-menu-item">Property verification of interface conformance</el-menu-item>-->
+<!--          </el-sub-menu>-->
         </el-menu>
       </div>
-
   </div>
-
 </template>
-
 <script >
 
 import {downloadAtomSystemVHDLCode} from "@/api/download";
@@ -154,25 +124,11 @@ export default {
 .en{
   font-size: 14px;
 }
-.el-sub-menu .el-menu-item:hover{
-  background-color: rgba(204, 204, 204, 0.3) !important;
-}
-.el-menu-item{
-  color: #ffffff;
-}
-.clickBtn{
-  margin-top: 12px;
-  background-color: transparent;
-  color: white;
-  line-height:50px;
-}
-</style>
-<style>
-
-.el-sub-menu__title{
-  color: white !important;
-}
-.el-sub-menu__title:hover{
+.el-menu-item:hover {
   background-color: transparent !important;
 }
+
+
+
 </style>
+

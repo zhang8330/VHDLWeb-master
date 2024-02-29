@@ -8,7 +8,7 @@
     <div class="button-container">
 <!--      <back-btn class="left-button" to="/upload/main">Back</back-btn>-->
 <!--      <next-step-btn class="right-button" to="/upload/sub">Next Step</next-step-btn>-->
-      <back-btn class="left-button" to="/upload/sub">Back</back-btn>
+      <back-btn class="left-button" to="/upload/devLib">Back</back-btn>
       <next-step-btn class="right-button" to="/generate/main">Next Step</next-step-btn>
     </div>
 

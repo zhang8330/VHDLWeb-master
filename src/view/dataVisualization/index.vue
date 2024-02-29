@@ -1,11 +1,12 @@
 <template>
   <div class="container">
-    <h1 class="hint">Step 7: Generation of data visualizations<br></h1>
+    <h1 class="hint">Step 5: Generation of data visualizations<br></h1>
     <div style="display:flex;">
-      <get-external-module @data-update="getName" :devicename="devicename" style="width:20%;"></get-external-module>
-      <show-external-model :devicename="devicename"></show-external-model>
+       <get-external-module @data-update="getName" :devicename="devicename" style="width:20%;"></get-external-module>
+        <show-external-model :devicename="devicename"></show-external-model>
     </div>
     <div class="button-container">
+      <el-button type="success" @click="runSimulation">Simulate</el-button>
       <back-btn class="left-button" to="/controllerVhdl">Back</back-btn>
     </div>
   </div>
@@ -15,6 +16,7 @@
 import GetExternalModule from "@/components/getExternalModule/getExternalModule.vue";
 import ShowModel from "@/components/simulationStructure/showModel.vue";
 import ShowExternalModel from "@/components/showExternalModule/showExternalModel.vue";
+import {runSimulation} from "@/api/get";
 
 export default {
   name: "index",
@@ -26,7 +28,9 @@ export default {
     }
   },
 
+
   methods:{
+    runSimulation,
     getName(path,name){
       this.path = path;
       this.devicename = name;

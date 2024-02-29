@@ -17,7 +17,7 @@ export default {
   },
   methods:{
     getDeviceName(data){
-      if(data.children == undefined){
+      if(data.children === undefined){
         this.devicename = data["label"];
         this.$emit("data-update",this.path, this.devicename);
       }

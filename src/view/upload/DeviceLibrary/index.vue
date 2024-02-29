@@ -9,26 +9,26 @@
       </el-radio-group>
     </div>
     <hr/>
-<!--    <h1 class="hint">Step 1.2: <br>Please Upload the Predefined Device Models Of Your System.</h1>-->
+    <!--    <h1 class="hint">Step 1.2: <br>Please Upload the Predefined Device Models Of Your System.</h1>-->
     <h3  v-show="AddOrShow==='add'"><br>&nbsp;Please Upload the Predefined Device Models Of Your System.</h3>
     <h3  v-show="AddOrShow==='show'"><br>&nbsp;Show all the devices.</h3>
     <h3  v-show="AddOrShow==='delete'"><br>&nbsp;Please enter the name and type of the device you want to delete.</h3>
-      <div v-if="(AddOrShow === 'add')">
-        <upload-device></upload-device>
-      </div>
-      <div v-if="(AddOrShow === 'show')">
-        <show-all-devices></show-all-devices>
-      </div>
-      <div v-if="(AddOrShow === 'delete')">
-        <delete-device></delete-device>
-      </div>
+    <div v-if="(AddOrShow === 'add')" style="background-color: #F5F7FA">
+      <upload-device></upload-device>
     </div>
-    <div class="button-container">
-<!--      <back-btn class="left-button" to="/upload/main">Back</back-btn>-->
-<!--      <next-step-btn class="right-button" to="/generate/main">Next Step</next-step-btn>-->
-      <back-btn class="left-button" to="/upload/sub" @click="AddOrShow='main',flag = true,radio1='New Work' ">Back</back-btn>
-      <next-step-btn class="right-button" to="/upload/main" v-show="AddOrShow === 'main'">Next Step</next-step-btn>
+    <div v-if="(AddOrShow === 'show')" style="background-color: #F5F7FA">
+      <show-all-devices></show-all-devices>
     </div>
+    <div v-if="(AddOrShow === 'delete')" style="background-color: #F5F7FA">
+      <delete-device></delete-device>
+    </div>
+  </div>
+  <div class="button-container">
+    <!--      <back-btn class="left-button" to="/upload/main">Back</back-btn>-->
+    <!--      <next-step-btn class="right-button" to="/generate/main">Next Step</next-step-btn>-->
+    <back-btn class="left-button" to="/upload/devLib" @click="AddOrShow='main',flag = true,radio1='New Work' ">Back</back-btn>
+    <next-step-btn class="right-button" to="/upload/main" v-show="AddOrShow === 'main'">Next Step</next-step-btn>
+  </div>
 
 </template>
 <script>
@@ -38,7 +38,7 @@ import DeleteDevice from "@/components/deleteDevice/deleteDevice.vue";
 import {Delete, DocumentAdd, Reading} from "@element-plus/icons-vue";
 import { ref } from 'vue'
 export default {
-  name: "SubController",
+  name: "index",
   components: {DocumentAdd, Reading, Delete, DeleteDevice, ShowAllDevices, UploadDevice},
   data(){
     return {

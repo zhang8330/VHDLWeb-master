@@ -17,7 +17,7 @@ export default {
         },
         changeDrawer(state){
             state.drawer = !state.drawer;
-            console.log( state.drawer)
+            // console.log( state.drawer);
         }
     },
 
