@@ -89,14 +89,11 @@ export default {
 
 <style scoped>
 #buttonBox{
-  position:absolute;
-  top:300px;
-  left:30px;
+  margin:0 auto;
   width:200px;
   height:100px;
 }
 .button-container{
-  margin-top:40px;
   margin-bottom: 30px;
   display: flex;
   justify-content: center;

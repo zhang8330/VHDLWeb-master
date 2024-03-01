@@ -90,11 +90,9 @@ div{
   align-items: center;
 }
 #buttonBox{
-  position:absolute;
-  top:340px;
-  left:80px;
   width:200px;
   height:100px;
+  margin:0 auto;
 }
 .elb{
   margin:5px;

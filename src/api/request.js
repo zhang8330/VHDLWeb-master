@@ -6,7 +6,7 @@ import axios from 'axios'
 // 封装axios为service接口
 const service = axios.create({
     baseURL: '/api',
-    timeout: 1000000
+    timeout: 10000000
 })
 
 // // 请求拦截器

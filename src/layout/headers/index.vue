@@ -36,7 +36,9 @@
 <!--            <el-menu-item index="/getSimulationStructure">Get simulation structure</el-menu-item>-->
 <!--            <el-menu-item index="/dataVisualization">Generate the simulation results and the data visualizations</el-menu-item>-->
 <!--          </el-sub-menu>-->
-          <el-menu-item>Simuation</el-menu-item>
+          <el-menu-item @click="run">Simuation</el-menu-item>
+          <el-menu-item @click="download">Download</el-menu-item>
+          <el-menu-item @click="assemble">Assemble</el-menu-item>
 <!--          <el-sub-menu index="5">-->
 <!--            <template #title >Function</template>-->
 <!--            <el-menu-item  @click="download">Download</el-menu-item>-->
@@ -56,6 +58,7 @@
 import {downloadAtomSystemVHDLCode} from "@/api/download";
 import { ref } from 'vue'
 import {runSimulation} from "@/api/get";
+import {assembleSystem} from "@/api/assemble";
 export default {
   data() {
     return{
@@ -63,6 +66,14 @@ export default {
     }
   },
   methods: {
+    assemble(){
+      assembleSystem().then(()=>{
+        ElMessage.success("success!");
+      }).catch((error)=>{
+        ElMessage.warning("failed!");
+        console.log(error);
+      })
+    },
     run(){
       runSimulation().then(()=>{
         ElMessage.success("success!");

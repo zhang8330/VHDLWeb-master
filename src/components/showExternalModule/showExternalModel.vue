@@ -79,7 +79,7 @@ li:hover{
 }
 #container{
   display: flex;
-  width:820px;
+  width:720px;
   height:300px;
   margin:0 auto;
   background-color: #cbd4de;
