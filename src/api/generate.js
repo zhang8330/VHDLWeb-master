@@ -29,3 +29,9 @@ export function generateControllerIP(data){
         data
     })
 }
+export function generateCDomain(){
+    return request({
+        url:"/gemerateCdomain",
+        method:"post",
+    })
+}

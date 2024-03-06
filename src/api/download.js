@@ -7,3 +7,9 @@ export function downloadAtomSystemVHDLCode(){
         method: 'post'
     })
 }
+export function downloadAtomProject(){
+    return request({
+        url:"/downloadatomproject",
+        method:"post"
+    })
+}

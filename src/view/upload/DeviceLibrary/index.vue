@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="hint">Step 1: <hr/>Upload of the device model library<br></h1>
+    <h1 class="hint"><hr/>Upload of the device model library<br></h1>
     <div style="margin:50px 0 0 10px;">
       <el-radio-group v-model="radio1" size="large" >
         <el-radio-button label="Upload" @click="AddOrShow='add', flag=false" />

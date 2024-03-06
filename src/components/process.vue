@@ -30,6 +30,23 @@
           </el-menu-item-group>
         </el-sub-menu>
       </el-menu>
+      <el-menu :default-openeds="['1']">
+        <el-sub-menu index="2">
+          <template #title>
+            Function
+          </template>
+          <el-menu-item-group title="DeviceLibrary">
+            <el-menu-item index="1-1">Upload</el-menu-item>
+            <el-menu-item index="1-2">show</el-menu-item>
+            <el-menu-item index="1-3">Delete</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group title="DownLoad">
+            <el-menu-item>download vhdl code</el-menu-item>
+            <el-menu-item></el-menu-item>
+            <el-menu-item></el-menu-item>
+          </el-menu-item-group>
+        </el-sub-menu>
+      </el-menu>
     </el-scrollbar>
   </el-aside>
 </template>

@@ -8,3 +8,9 @@ export function generateatom(){
         method: 'post'
     })
 }
+export function atomTest(){
+    return request({
+        url:'/atomtest',
+        method:'post'
+    })
+}

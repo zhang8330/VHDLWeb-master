@@ -13,3 +13,9 @@ export function judgePhysical(){
         method:"post"
     })
 }
+export function judgeC(){
+    return request({
+        url:'/judge_C',
+        method:"post"
+    })
+}

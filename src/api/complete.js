@@ -24,3 +24,9 @@ export function completeController(data){
         data
     })
 }
+export function completeTB(){
+    return request({
+        url:'/complete_tb',
+        method:'post'
+    })
+}

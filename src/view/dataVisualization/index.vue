@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="hint">Step 5: Generation of data visualizations<br></h1>
+    <h1 class="hint">Generation of data visualizations<br></h1>
     <div style="display:flex;">
        <get-external-module @data-update="getName" :devicename="devicename" style="width:20%;"></get-external-module>
         <show-external-model :devicename="devicename"></show-external-model>

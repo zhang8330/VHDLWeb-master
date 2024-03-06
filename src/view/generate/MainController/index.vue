@@ -1,16 +1,7 @@
 <template>
   <div class="container">
-<!--    <h1 class="hint">Step 2.1: <br>Generate Main Controller Code</h1>-->
-    <h1 class="hint">Step 3.2: <br>Generate the corresponding VHDL simulation code according to the uploaded main controller system specification</h1>
-
-<!--    <div class="download" >-->
-<!--      <el-button type="primary">Generate Code</el-button>-->
-<!--      <el-button type="warning" >Download Code</el-button>-->
-<!--    </div>-->
-
+    <h1 class="hint"><br>Generate the corresponding VHDL simulation code according to the uploaded main controller system specification</h1>
     <p>The VHDL simlation code as follows</p>
-
-    <!-- <vhdl-editor >1111</vhdl-editor> -->
     <el-select v-model="code" placeholder="请选择">
       <el-option
           v-for="item in files"
