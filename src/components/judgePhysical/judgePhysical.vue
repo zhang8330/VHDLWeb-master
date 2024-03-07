@@ -1,8 +1,8 @@
 <template>
 
-  <h1 class="hint" v-show="whetherNeed && !whetherGenerate">Step 5.2: <br>Complete the physical data store.</h1>
-  <h1 class="hint" v-show="whetherGenerate && whetherNeed">Step 5.3: <br>Generate the physical data storage IP core.</h1>
-  <h1 class="hint" v-show="!whetherNeed && !whetherGenerate">Step 5.1: <br>Determine whether the physical data store needs to be completed.</h1>
+  <h1 class="hint" v-show="whetherNeed && !whetherGenerate"><br>Complete the physical data store.</h1>
+  <h1 class="hint" v-show="whetherGenerate && whetherNeed"><br>Generate the physical data storage IP core.</h1>
+  <h1 class="hint" v-show="!whetherNeed && !whetherGenerate"><br>Determine whether the physical data store needs to be completed.</h1>
   <div v-if="ipshow">
     <Codemirror
         ref="cm"

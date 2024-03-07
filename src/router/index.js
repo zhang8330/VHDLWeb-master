@@ -5,8 +5,7 @@ const routes = [
         path: '/',
         name: '/',
         component: () => import('../layout'),
-        redirect:"/upload/devLib",
-        //redirect:"/getSimulationStructure",
+        redirect:"/upload/main",
         children:[
             {
                 path: '/Home',

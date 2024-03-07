@@ -23,13 +23,6 @@
       <delete-device></delete-device>
     </div>
   </div>
-  <div class="button-container">
-    <!--      <back-btn class="left-button" to="/upload/main">Back</back-btn>-->
-    <!--      <next-step-btn class="right-button" to="/generate/main">Next Step</next-step-btn>-->
-    <back-btn class="left-button" to="/upload/devLib" @click="AddOrShow='main',flag = true,radio1='New Work' ">Back</back-btn>
-    <next-step-btn class="right-button" to="/upload/main" v-show="AddOrShow === 'main'">Next Step</next-step-btn>
-  </div>
-
 </template>
 <script>
 import UploadDevice from "@/components/uploadDevice/uploadDevice.vue";
@@ -69,21 +62,5 @@ el-icon{
 .hint{
   margin: 40px 0 40px 0;
   font-size: 30px;
-}
-
-
-.button-container{
-  margin-top:40px;
-  margin-left:55px;
-  display: flex;
-  justify-content: center;
-}
-
-.left-button{
-  margin-right: 10px;
-}
-
-.right-button{
-  margin-left: 10px;
 }
 </style>

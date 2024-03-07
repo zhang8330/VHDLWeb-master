@@ -3,10 +3,7 @@
 
     <judge-physical/>
   </div>
-  <div class="button-container">
-    <back-btn class="left-button" to="/generate/atom">Back</back-btn>
-    <next-step-btn class="right-button" to="/controllerVhdl">Next Step</next-step-btn>
-  </div>
+
 </template>
 
 <script>

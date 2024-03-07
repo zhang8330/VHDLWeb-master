@@ -1,7 +1,7 @@
 <template>
   <el-aside style="border-right:1px solid #cfd9e3;margin-top: 2px;background-color: #97ABFF">
     <el-scrollbar>
-      <el-menu :default-openeds="['1']">
+      <el-menu :default-openeds="['']">
         <el-sub-menu index="1">
           <template #title>
             Step
@@ -30,20 +30,30 @@
           </el-menu-item-group>
         </el-sub-menu>
       </el-menu>
-      <el-menu :default-openeds="['1']">
+      <el-menu :default-openeds="['2']">
         <el-sub-menu index="2">
           <template #title>
             Function
           </template>
           <el-menu-item-group title="DeviceLibrary">
-            <el-menu-item index="1-1">Upload</el-menu-item>
-            <el-menu-item index="1-2">show</el-menu-item>
-            <el-menu-item index="1-3">Delete</el-menu-item>
+            <el-menu-item index="1-1" @click="this.$router.push('/upload/devLib');">Upload</el-menu-item>
+            <el-menu-item index="1-2" @click="this.$router.push('/upload/devLib');">Show</el-menu-item>
+            <el-menu-item index="1-3" @click="this.$router.push('/upload/devLib');">Delete</el-menu-item>
           </el-menu-item-group>
           <el-menu-item-group title="DownLoad">
-            <el-menu-item>download vhdl code</el-menu-item>
-            <el-menu-item></el-menu-item>
-            <el-menu-item></el-menu-item>
+            <el-menu-item index="2-1" @click="downloadVhdl">Download VHDL Code</el-menu-item>
+            <el-menu-item index="2-2" @click="downloadAtomProject">Download Atom Project</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group title="Validate">
+            <el-menu-item index="3-1" @click="interfaceValidation">Validate Interface Consistency</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group title="Simulation Structure">
+            <el-menu-item index="4-1" @click="this.$router.push('/getSimulationStructure')">Get Simulation Structure</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group title="Physical Store">
+            <el-menu-item index="5-1" @click="this.$router.push('/physical/JudgeAndCompleteAndGenerate')">Analyze Physical Storage</el-menu-item>
+            <el-menu-item index="5-1" @click="this.$router.push('/physical/JudgeAndCompleteAndGenerate')">Complete Physical Storage</el-menu-item>
+            <el-menu-item index="5-1" @click="this.$router.push('/physical/JudgeAndCompleteAndGenerate')">Generate Physical Data Storage IP Core</el-menu-item>
           </el-menu-item-group>
         </el-sub-menu>
       </el-menu>
@@ -54,10 +64,59 @@
 <script>
 import { ref } from 'vue'
 import { Menu as IconMenu, Message, Setting } from '@element-plus/icons-vue'
+import {downloadAllAtomProject, downloadAtomSystemVHDLCode} from "@/api/download";
+import {interfaceConsistencyValidation} from "@/api/oroperty";
 export default {
+  props:["description"],
   data(){
     return {
-
+      description:""
+    }
+  },
+  methods:{
+    downloadVhdl() {
+      downloadAtomSystemVHDLCode()
+          .then( response => {
+            const url = window.URL.createObjectURL(response.data);
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', "AtomSystemVhdl.zip"); // 设置要保存的文件名
+            document.body.appendChild(link);
+            setTimeout(function(){
+              link.click();
+              document.body.removeChild(link);
+            },1000)
+          })
+          .catch(error => {
+            console.error('文件下载失败', error);
+          });
+    },
+    downloadAtomProject(){
+      downloadAllAtomProject().then( response => {
+        const url = window.URL.createObjectURL(response.data);
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', "AtomSystemProject.zip"); // 设置要保存的文件名
+        document.body.appendChild(link);
+        setTimeout(function(){
+          link.click();
+          document.body.removeChild(link);
+        },1000)
+        ElMessage.success('原子组件文件下载成功');
+      }).catch(error => {
+            ElMessage.warning('原子组件文件下载失败');
+            console.error('原子组件文件下载失败', error);
+      });
+    },
+    interfaceValidation(){
+      interfaceConsistencyValidation().then(res=>{
+        this.description = res.data;
+        this.$emit('child-msg', this.description);
+        ElMessage.success("Successful validation!!");
+      }).catch(error=>{
+        console.log(error);
+        ElMessage.warning("Validation failure!!");
+      })
     }
   }
 }

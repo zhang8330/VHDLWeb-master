@@ -12,11 +12,6 @@
       <show-data :portname="portname" :path="path" class="imgBox"></show-data>
     </div>
   </div>
-
-<!--  <div class="button-container" style="display: flex;">-->
-<!--    <back-btn class="left-button" to="/assembleSystem">Back</back-btn>-->
-<!--    <next-step-btn class="right-button" to="/propertyVerification">Next Step</next-step-btn>-->
-<!--  </div>-->
 </template>
 
 <script>
@@ -52,7 +47,7 @@ export default {
 #componentBox{
   display: flex;
   flex-wrap: wrap;
-  gap:15px;
+  gap:1px;
 }
 .container{
   /*background-color: aqua;*/

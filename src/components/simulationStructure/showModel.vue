@@ -113,7 +113,7 @@ li:hover{
 #container{
   display: flex;
   width:820px;
-  height:300px;
+  height:100%;
   margin:0 auto;
   background-color: #cbd4de;
 }

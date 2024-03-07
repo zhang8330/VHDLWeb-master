@@ -1,7 +1,7 @@
 <template>
   <div aria-label="A complete example of page header" class="page-header">
       <div class="flex items-center">
-        <div id="img" @click="this.$router.push('/upload/devLib')" style="width: 90px; height: 62px">
+        <div id="img" @click="this.$router.push('/upload/main')" style="width: 90px; height: 62px">
           <el-image :src="require('@/assets/logo.png')"  style="width: 90px; height: 62px" ></el-image>
         </div>
         <div id="project-title" style="cursor:default;">
@@ -36,8 +36,7 @@
 <!--            <el-menu-item index="/getSimulationStructure">Get simulation structure</el-menu-item>-->
 <!--            <el-menu-item index="/dataVisualization">Generate the simulation results and the data visualizations</el-menu-item>-->
 <!--          </el-sub-menu>-->
-          <el-menu-item @click="run">Simuation</el-menu-item>
-          <el-menu-item @click="download">Download</el-menu-item>
+          <el-menu-item @click="run">Simulation</el-menu-item>
           <el-menu-item @click="assemble">Assemble</el-menu-item>
 <!--          <el-sub-menu index="5">-->
 <!--            <template #title >Function</template>-->
@@ -89,23 +88,6 @@ export default {
     changeDrawer(drawer){
       this.$store.commit("app/changeDrawer",!drawer);
     },
-    download() {
-      downloadAtomSystemVHDLCode()
-          .then( response => {
-            const url = window.URL.createObjectURL(response.data);
-            const link = document.createElement('a');
-            link.href = url;
-            link.setAttribute('download', "AtomSystemVhdl.zip"); // 设置要保存的文件名
-            document.body.appendChild(link);
-            setTimeout(function(){
-              link.click();
-              document.body.removeChild(link);
-            },1000)
-          })
-          .catch(error => {
-            console.error('文件下载失败', error);
-          });
-    }
   }
 }
 
