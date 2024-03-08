@@ -71,12 +71,14 @@ export default {
     judge(){
       judgePhysical().then(res=>{
         if(res.data.message === "No need to complete"){
-          ElMessage.success("No need to complete")
-        }else{
-          ElMessage.warning("need to complete")
-          this.key = Object.keys(res.data.needcomplete)[0]
-          this.code = res.data.needcomplete[this.key]
-          this.whetherNeed = true
+          ElMessage.success("no need to complete");
+        }else if(res.data.message === "need to complete"){
+          ElMessage.warning("need to complete");
+          this.key = Object.keys(res.data.needcomplete)[0];
+          this.code = res.data.needcomplete[this.key];
+          this.whetherNeed = true;
+        }else {
+          ElMessage.warning("unknown");
         }
       }).catch(error => {
         console.error('判断失败', error);
@@ -91,7 +93,7 @@ export default {
       completePhysical(data).then(res=>{
         //console.log(res)
         ElMessage.success("complete success!");
-        this.whetherGenerate = true
+        this.whetherGenerate = true;
       }).catch(error=>{
         ElMessage.warning("complete failed!");
         console.log('补全失败', error);
@@ -101,7 +103,7 @@ export default {
       this.code = content;
       this.$nextTick(() => {
         console.log("code:" + this.code);
-        console.log("content:" + content)
+        console.log("content:" + content);
       });
     },
     //生成

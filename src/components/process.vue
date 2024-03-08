@@ -51,9 +51,9 @@
             <el-menu-item index="4-1" @click="this.$router.push('/getSimulationStructure')">Get Simulation Structure</el-menu-item>
           </el-menu-item-group>
           <el-menu-item-group title="Physical Store">
-            <el-menu-item index="5-1" @click="this.$router.push('/physical/JudgeAndCompleteAndGenerate')">Analyze Physical Storage</el-menu-item>
-            <el-menu-item index="5-1" @click="this.$router.push('/physical/JudgeAndCompleteAndGenerate')">Complete Physical Storage</el-menu-item>
-            <el-menu-item index="5-1" @click="this.$router.push('/physical/JudgeAndCompleteAndGenerate')">Generate Physical Data Storage IP Core</el-menu-item>
+            <el-menu-item index="5-1" @click="this.$router.push('/physical/JudgeAndCompleteAndGenerate');">Analyze Physical Storage</el-menu-item>
+            <el-menu-item index="5-2" @click="this.$router.push('/physical/JudgeAndCompleteAndGenerate');">Complete Physical Storage</el-menu-item>
+            <el-menu-item index="5-3" @click="this.$router.push('/physical/JudgeAndCompleteAndGenerate');">Generate Physical Data Storage IP Core</el-menu-item>
           </el-menu-item-group>
         </el-sub-menu>
       </el-menu>
